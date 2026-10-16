@@ -31,5 +31,7 @@ if marks == "":
     marks = 75
 
 marks = int(marks)
+print(name)
+print(marks)
 
 display_result(name, marks)
