@@ -1,3 +1,5 @@
+import sys
+
 def calculate_grade(marks):
     if marks >= 90:
         return "A"
@@ -19,8 +21,8 @@ def display_result(name, marks):
     print("Grade:", grade)
 
 
-name = input("Enter student name: ")
-marks = input("Enter marks: ")
+name = input(sys.argv[1])
+marks = input(sys.argv[2])
 
 if name == "":
     name = "Student"
