@@ -1,17 +1,33 @@
-import sys
+def calculate_grade(marks):
+    if marks >= 90:
+        return "A"
+    elif marks >= 75:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    elif marks >= 50:
+        return "D"
+    else:
+        return "F"
 
-def display_student_details(name, college, usn, city):
-    print("----- Student Details -----")
-    print("Name   :", name)
-    print("College:", college)
-    print("USN    :", usn)
-    print("City   :", city)
-    print("---------------------------")
+
+def display_result(name, marks):
+    grade = calculate_grade(marks)
+
+    print("Student:", name)
+    print("Marks:", marks)
+    print("Grade:", grade)
 
 
-name = sys.argv[1]
-college = sys.argv[2]
-usn = sys.argv[3]
-city = sys.argv[4]
+name = input("Enter student name: ")
+marks = input("Enter marks: ")
 
-display_student_details(name, college, usn, city)
+if name == "":
+    name = "Student"
+
+if marks == "":
+    marks = 75
+
+marks = int(marks)
+
+display_result(name, marks)
